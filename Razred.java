@@ -30,10 +30,27 @@ public String toString(){
 	return razredToString;
 }
 
+
 /*metod koji vraca random objekt tipa Student iz 2D niza objekata tipa Student,
  *  a koji predstavlja polje u klasi Razred
  */
 public Student getRandomStudent(){
+	int indRed,indKol;
+	 indRed=(int)(Math.random()*6);
+	if(indRed==5){
+		 indKol=(int)(Math.random()*2);
+	}
+	else {
+	 indKol=(int)(Math.random()*4);
+	}
+	Student randomStudent=studenti[indRed][indKol];
+	return randomStudent;
+}
+
+/*(II verzija)metod koji vraca random objekt tipa Student iz 2D niza objekata tipa Student,
+ *  a koji predstavlja polje u klasi Razred
+ */
+/*public Student getRandomStudent(){
 	int indRed=(int)(Math.random()*6);
 	int indKol=(int)(Math.random()*4);
 	if((indRed==5)&&(indKol==2))
@@ -42,10 +59,10 @@ public Student getRandomStudent(){
 		indKol=indKol-2;
 	Student randomStudent=studenti[indRed][indKol];
 	return randomStudent;
-}
+}*/
 
 
-/*metod koji vraca random objekt tipa Student iz 2D niza objekata tipa Student,
+/*(III verzija)metod koji vraca random objekt tipa Student iz 2D niza objekata tipa Student,
  *  a koji predstavlja polje u klasi Razred
  */
 /*public Student getRandomStudent(){
