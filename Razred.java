@@ -34,8 +34,8 @@ public String toString(){
  *  a koji predstavlja polje u klasi Razred
  */
 public Student getRandomStudent(){
-	int indRed=(int)(Math.random() * 6;
-	int indKol=(int)(Math.random() * 4;
+	int indRed=(int)(Math.random() * 6);
+	int indKol=(int)(Math.random() * 4);
 	Student randomStudent=studenti[indRed][indKol];
 	return randomStudent;
 }
