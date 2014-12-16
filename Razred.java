@@ -36,6 +36,12 @@ public String toString(){
 public Student getRandomStudent(){
 	int indRed=(int)(Math.random() * 6);
 	int indKol=(int)(Math.random() * 4);
+	while(((indRed==5)&&(indKol==2))||((indRed==5)&&(indKol==3))){
+		indRed=(int)(Math.random()*6);
+		//System.out.println(indRed);
+		 indKol=(int)(Math.random()*4);
+		//System.out.println(indKol);
+	}
 	Student randomStudent=studenti[indRed][indKol];
 	return randomStudent;
 }
