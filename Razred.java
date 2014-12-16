@@ -34,6 +34,21 @@ public String toString(){
  *  a koji predstavlja polje u klasi Razred
  */
 public Student getRandomStudent(){
+	int indRed=(int)(Math.random()*6);
+	int indKol=(int)(Math.random()*4);
+	if((indRed==5)&&(indKol==2))
+		indKol=indKol-1;
+	else if((indRed==5)&&(indKol==3))
+		indKol=indKol-2;
+	Student randomStudent=studenti[indRed][indKol];
+	return randomStudent;
+}
+
+
+/*metod koji vraca random objekt tipa Student iz 2D niza objekata tipa Student,
+ *  a koji predstavlja polje u klasi Razred
+ */
+/*public Student getRandomStudent(){
 	int indRed=(int)(Math.random() * 6);
 	int indKol=(int)(Math.random() * 4);
 	while(((indRed==5)&&(indKol==2))||((indRed==5)&&(indKol==3))){
@@ -44,6 +59,6 @@ public Student getRandomStudent(){
 	}
 	Student randomStudent=studenti[indRed][indKol];
 	return randomStudent;
-}
+}*/
 
 }
